@@ -1,1 +1,7 @@
-{}
+{
+  "lock": false,
+  "imports": {
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.1",
+    "ts-morph": "npm:ts-morph@^22.0.0"
+  }
+}
