@@ -1,7 +1,10 @@
 {
   "lock": false,
   "imports": {
-    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.1",
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.2",
     "ts-morph": "npm:ts-morph@^22.0.0"
+  },
+  "tasks": {
+    "generate": "deno run -A cli/codegen.ts"
   }
 }

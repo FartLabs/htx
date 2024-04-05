@@ -1,6 +1,6 @@
 # [@fartlabs/htx](https://jsr.io/@fartlabs/htx)
 
-[![GitHub Actions][GitHub Actions badge]][GitHub Actions]
+[![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)
 
 Render HTML components with JSX.
 
@@ -69,13 +69,10 @@ Run `deno fmt` to format the code.
 
 Run `deno lint` to lint the code.
 
+### Code generation
+
+Run `deno task generate` to generate the code.
+
 ---
 
 Developed with ❤️ [**@FartLabs**](https://github.com/FartLabs)
-
-[JSR]: https://jsr.io/@fartlabs/htx
-[JSR badge]: https://jsr.io/badges/@fartlabs/htx
-[JSR score]: https://jsr.io/@fartlabs/htx/score
-[JSR score badge]: https://jsr.io/badges/@fartlabs/htx/score
-[GitHub Actions]: https://github.com/FartLabs/htx/actions/workflows/check.yaml
-[GitHub Actions badge]: https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg
