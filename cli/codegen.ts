@@ -1,5 +1,9 @@
 import { Project } from "ts-morph";
-import { getDescriptors } from "@fartlabs/ht/cli/codegen.ts";
+import {
+  capitalize,
+  getDescriptors,
+  toDocs,
+} from "@fartlabs/ht/cli/codegen.ts";
 
 if (import.meta.main) {
   const project = new Project();
@@ -18,7 +22,7 @@ if (import.meta.main) {
       descriptor.attrs.length === 0
         ? {
           isTypeOnly: true,
-          moduleSpecifier: "@fartlabs/ht",
+          moduleSpecifier: "@fartlabs/ht/lib/global_attributes.ts",
           namedImports: ["GlobalAttributes"],
         }
         : {
@@ -30,26 +34,42 @@ if (import.meta.main) {
 
     // Import the render function.
     sourceFile.addImportDeclaration({
-      moduleSpecifier: "@fartlabs/ht",
-      namedImports: [descriptor.functionName],
+      moduleSpecifier: `@fartlabs/ht/${descriptor.tag}`,
+      namedImports: [
+        { name: descriptor.functionName, alias: "render" },
+      ],
+    });
+
+    // Re-export the props interface.
+    sourceFile.addExportDeclaration({
+      isTypeOnly: true,
+      namedExports: [descriptor.propsInterfaceName],
     });
 
     // Create the component function.
+    const componentName = capitalize(descriptor.tag); // TODO: Consider using `.toUpperCase()` instead.
     sourceFile.addFunction({
-      name: descriptor.tag,
+      name: componentName,
       isExported: true,
       parameters: [{
         name: "props",
         type: `${descriptor.propsInterfaceName} & { children?: string[] }`,
-        hasQuestionToken: true,
+        initializer: "{}",
       }],
       returnType: "string",
       statements: [
         "const { children, ...rest } = props;",
         descriptor.isVoid
-          ? `return ${descriptor.functionName}(rest);`
-          : `return ${descriptor.functionName}(rest, ...(children ?? []));`,
+          ? "return render(rest);"
+          : "return render(rest, ...(children ?? []));",
       ],
+      docs: toDocs({
+        description:
+          `${componentName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        see: descriptor.see,
+        isDeprecated: descriptor.isDeprecated,
+        isExperimental: descriptor.isExperimental,
+      }),
     });
   }
 
