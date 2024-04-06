@@ -1,6 +1,6 @@
 # [@fartlabs/htx](https://jsr.io/@fartlabs/htx)
 
-[![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)
+[![GitHub Actions][GitHub Actions badge]][GitHub Actions]
 
 Render HTML components with JSX.
 
@@ -42,15 +42,9 @@ deno add @fartlabs/jsonx @fartlabs/htx
 5\. Add a file ending in `.[j|t]sx` to your project. For example, `main.tsx`.
 
 ```tsx
-import { A, BODY, H1, P } from "@fartlabs/htx";
+import { a } from "@fartlabs/htx";
 
-const html = (
-  <BODY>
-    <H1>Hello, World!</H1>
-    <P>This is a paragraph.</P>
-    <A href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</A>
-  </BODY>
-);
+const html = <a href="https://example.com">Hello, world!</a>;
 
 Deno.writeTextFileSync("index.html", html);
 ```
@@ -64,7 +58,7 @@ deno run --allow-net main.tsx
 Resulting `index.html`:
 
 ```html
-<body><h1>Hello, World!</h1><p>This is a paragraph.</p><a href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</a></body>
+<a href="https://example.com">Hello, world!</a>
 ```
 
 ## Contribute
@@ -75,10 +69,13 @@ Run `deno fmt` to format the code.
 
 Run `deno lint` to lint the code.
 
-### Code generation
-
-Run `deno task generate` to generate the code.
-
 ---
 
 Developed with ❤️ [**@FartLabs**](https://github.com/FartLabs)
+
+[JSR]: https://jsr.io/@fartlabs/htx
+[JSR badge]: https://jsr.io/badges/@fartlabs/htx
+[JSR score]: https://jsr.io/@fartlabs/htx/score
+[JSR score badge]: https://jsr.io/badges/@fartlabs/htx/score
+[GitHub Actions]: https://github.com/FartLabs/htx/actions/workflows/check.yaml
+[GitHub Actions badge]: https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg
