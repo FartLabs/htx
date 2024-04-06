@@ -74,6 +74,17 @@ if (import.meta.main) {
   // Save all the files.
   await project.save();
 
+  // Update the deno.json exports.
+  const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
+  denoConfig.exports = {
+    ".": "./mod.ts",
+    ...Object.fromEntries(descriptors.map((descriptor) => [
+      `./${descriptor.tag}`,
+      `./${descriptor.tag}.tsx`,
+    ])),
+  };
+  await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
+
   // Run `deno fmt` on the generated files.
   const command = new Deno.Command(Deno.execPath(), {
     args: ["fmt", "./"],
