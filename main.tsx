@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { MainElementProps } from "@fartlabs/ht/main";
 import { main as render } from "@fartlabs/ht/main";
 
-export type { GlobalAttributes };
+export type { MainElementProps };
 
 /**
- * Main renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.
+ * MAIN component renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/main>
  */
-export function Main(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function MAIN(
+  props: MainElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

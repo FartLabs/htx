@@ -1,13 +1,15 @@
-import type { PreProps } from "@fartlabs/ht/pre";
+import type { PreElementProps } from "@fartlabs/ht/pre";
 import { pre as render } from "@fartlabs/ht/pre";
 
-export type { PreProps };
+export type { PreElementProps };
 
 /**
- * Pre renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
+ * PRE component renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre>
  */
-export function Pre(props: PreProps & { children?: string[] } = {}): string {
+export function PRE(
+  props: PreElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

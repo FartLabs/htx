@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { SearchElementProps } from "@fartlabs/ht/search";
 import { search as render } from "@fartlabs/ht/search";
 
-export type { GlobalAttributes };
+export type { SearchElementProps };
 
 /**
- * Search renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Element/search) element.
+ * SEARCH component renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Element/search) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/search>
  */
-export function Search(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function SEARCH(
+  props: SearchElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

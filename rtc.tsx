@@ -1,15 +1,15 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { RtcElementProps } from "@fartlabs/ht/rtc";
 import { rtc as render } from "@fartlabs/ht/rtc";
 
-export type { GlobalAttributes };
+export type { RtcElementProps };
 
 /**
- * Rtc renders the [`rtc`](https://developer.mozilla.org/docs/Web/HTML/Element/rtc) element.
+ * RTC component renders the [`rtc`](https://developer.mozilla.org/docs/Web/HTML/Element/rtc) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rtc>
  * @deprecated
  */
-export function Rtc(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function RTC(
+  props: RtcElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

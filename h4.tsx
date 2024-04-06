@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { H4ElementProps } from "@fartlabs/ht/h4";
 import { h4 as render } from "@fartlabs/ht/h4";
 
-export type { GlobalAttributes };
+export type { H4ElementProps };
 
 /**
- * H4 renders the [`h4`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.
+ * H4 component renders the [`h4`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements>
  */
 export function H4(
-  props: GlobalAttributes & { children?: string[] } = {},
+  props: H4ElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

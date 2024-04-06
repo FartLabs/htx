@@ -1,15 +1,13 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { SElementProps } from "@fartlabs/ht/s";
 import { s as render } from "@fartlabs/ht/s";
 
-export type { GlobalAttributes };
+export type { SElementProps };
 
 /**
- * S renders the [`s`](https://developer.mozilla.org/docs/Web/HTML/Element/s) element.
+ * S component renders the [`s`](https://developer.mozilla.org/docs/Web/HTML/Element/s) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/s>
  */
-export function S(
-  props: GlobalAttributes & { children?: string[] } = {},
-): string {
+export function S(props: SElementProps & { children?: string[] } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

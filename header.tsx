@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { HeaderElementProps } from "@fartlabs/ht/header";
 import { header as render } from "@fartlabs/ht/header";
 
-export type { GlobalAttributes };
+export type { HeaderElementProps };
 
 /**
- * Header renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
+ * HEADER component renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/header>
  */
-export function Header(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function HEADER(
+  props: HeaderElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { DfnElementProps } from "@fartlabs/ht/dfn";
 import { dfn as render } from "@fartlabs/ht/dfn";
 
-export type { GlobalAttributes };
+export type { DfnElementProps };
 
 /**
- * Dfn renders the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element.
+ * DFN component renders the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dfn>
  */
-export function Dfn(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function DFN(
+  props: DfnElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

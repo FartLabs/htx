@@ -1,13 +1,15 @@
-import type { BrProps } from "@fartlabs/ht/br";
+import type { BrElementProps } from "@fartlabs/ht/br";
 import { br as render } from "@fartlabs/ht/br";
 
-export type { BrProps };
+export type { BrElementProps };
 
 /**
- * Br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
+ * BR component renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br>
  */
-export function Br(props: BrProps & { children?: string[] } = {}): string {
+export function BR(
+  props: BrElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest);
 }

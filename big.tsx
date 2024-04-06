@@ -1,15 +1,15 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { BigElementProps } from "@fartlabs/ht/big";
 import { big as render } from "@fartlabs/ht/big";
 
-export type { GlobalAttributes };
+export type { BigElementProps };
 
 /**
- * Big renders the [`big`](https://developer.mozilla.org/docs/Web/HTML/Element/big) element.
+ * BIG component renders the [`big`](https://developer.mozilla.org/docs/Web/HTML/Element/big) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/big>
  * @deprecated
  */
-export function Big(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function BIG(
+  props: BigElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

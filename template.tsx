@@ -1,14 +1,14 @@
-import type { TemplateProps } from "@fartlabs/ht/template";
+import type { TemplateElementProps } from "@fartlabs/ht/template";
 import { template as render } from "@fartlabs/ht/template";
 
-export type { TemplateProps };
+export type { TemplateElementProps };
 
 /**
- * Template renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
+ * TEMPLATE component renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
-export function Template(
-  props: TemplateProps & { children?: string[] } = {},
+export function TEMPLATE(
+  props: TemplateElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

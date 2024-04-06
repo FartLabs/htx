@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { SummaryElementProps } from "@fartlabs/ht/summary";
 import { summary as render } from "@fartlabs/ht/summary";
 
-export type { GlobalAttributes };
+export type { SummaryElementProps };
 
 /**
- * Summary renders the [`summary`](https://developer.mozilla.org/docs/Web/HTML/Element/summary) element.
+ * SUMMARY component renders the [`summary`](https://developer.mozilla.org/docs/Web/HTML/Element/summary) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/summary>
  */
-export function Summary(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function SUMMARY(
+  props: SummaryElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

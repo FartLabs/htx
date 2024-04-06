@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { AddressElementProps } from "@fartlabs/ht/address";
 import { address as render } from "@fartlabs/ht/address";
 
-export type { GlobalAttributes };
+export type { AddressElementProps };
 
 /**
- * Address renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
+ * ADDRESS component renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/address>
  */
-export function Address(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function ADDRESS(
+  props: AddressElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

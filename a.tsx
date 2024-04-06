@@ -1,13 +1,13 @@
-import type { AProps } from "@fartlabs/ht/a";
+import type { AElementProps } from "@fartlabs/ht/a";
 import { a as render } from "@fartlabs/ht/a";
 
-export type { AProps };
+export type { AElementProps };
 
 /**
- * A renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
+ * A component renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
  */
-export function A(props: AProps & { children?: string[] } = {}): string {
+export function A(props: AElementProps & { children?: string[] } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

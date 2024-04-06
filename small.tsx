@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { SmallElementProps } from "@fartlabs/ht/small";
 import { small as render } from "@fartlabs/ht/small";
 
-export type { GlobalAttributes };
+export type { SmallElementProps };
 
 /**
- * Small renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
+ * SMALL component renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/small>
  */
-export function Small(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function SMALL(
+  props: SmallElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

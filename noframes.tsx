@@ -1,15 +1,15 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { NoframesElementProps } from "@fartlabs/ht/noframes";
 import { noframes as render } from "@fartlabs/ht/noframes";
 
-export type { GlobalAttributes };
+export type { NoframesElementProps };
 
 /**
- * Noframes renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Element/noframes) element.
+ * NOFRAMES component renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Element/noframes) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noframes>
  * @deprecated
  */
-export function Noframes(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function NOFRAMES(
+  props: NoframesElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

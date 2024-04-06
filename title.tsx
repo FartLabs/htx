@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { TitleElementProps } from "@fartlabs/ht/title";
 import { title as render } from "@fartlabs/ht/title";
 
-export type { GlobalAttributes };
+export type { TitleElementProps };
 
 /**
- * Title renders the [`title`](https://developer.mozilla.org/docs/Web/HTML/Element/title) element.
+ * TITLE component renders the [`title`](https://developer.mozilla.org/docs/Web/HTML/Element/title) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/title>
  */
-export function Title(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function TITLE(
+  props: TitleElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

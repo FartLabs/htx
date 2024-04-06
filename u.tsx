@@ -1,15 +1,13 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { UElementProps } from "@fartlabs/ht/u";
 import { u as render } from "@fartlabs/ht/u";
 
-export type { GlobalAttributes };
+export type { UElementProps };
 
 /**
- * U renders the [`u`](https://developer.mozilla.org/docs/Web/HTML/Element/u) element.
+ * U component renders the [`u`](https://developer.mozilla.org/docs/Web/HTML/Element/u) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/u>
  */
-export function U(
-  props: GlobalAttributes & { children?: string[] } = {},
-): string {
+export function U(props: UElementProps & { children?: string[] } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

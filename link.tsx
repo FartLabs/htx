@@ -1,13 +1,15 @@
-import type { LinkProps } from "@fartlabs/ht/link";
+import type { LinkElementProps } from "@fartlabs/ht/link";
 import { link as render } from "@fartlabs/ht/link";
 
-export type { LinkProps };
+export type { LinkElementProps };
 
 /**
- * Link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+ * LINK component renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
  */
-export function Link(props: LinkProps & { children?: string[] } = {}): string {
+export function LINK(
+  props: LinkElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest);
 }

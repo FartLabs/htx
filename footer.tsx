@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { FooterElementProps } from "@fartlabs/ht/footer";
 import { footer as render } from "@fartlabs/ht/footer";
 
-export type { GlobalAttributes };
+export type { FooterElementProps };
 
 /**
- * Footer renders the [`footer`](https://developer.mozilla.org/docs/Web/HTML/Element/footer) element.
+ * FOOTER component renders the [`footer`](https://developer.mozilla.org/docs/Web/HTML/Element/footer) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/footer>
  */
-export function Footer(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function FOOTER(
+  props: FooterElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -1,15 +1,13 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { IElementProps } from "@fartlabs/ht/i";
 import { i as render } from "@fartlabs/ht/i";
 
-export type { GlobalAttributes };
+export type { IElementProps };
 
 /**
- * I renders the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.
+ * I component renders the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/i>
  */
-export function I(
-  props: GlobalAttributes & { children?: string[] } = {},
-): string {
+export function I(props: IElementProps & { children?: string[] } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

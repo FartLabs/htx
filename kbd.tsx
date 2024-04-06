@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { KbdElementProps } from "@fartlabs/ht/kbd";
 import { kbd as render } from "@fartlabs/ht/kbd";
 
-export type { GlobalAttributes };
+export type { KbdElementProps };
 
 /**
- * Kbd renders the [`kbd`](https://developer.mozilla.org/docs/Web/HTML/Element/kbd) element.
+ * KBD component renders the [`kbd`](https://developer.mozilla.org/docs/Web/HTML/Element/kbd) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/kbd>
  */
-export function Kbd(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function KBD(
+  props: KbdElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { RpElementProps } from "@fartlabs/ht/rp";
 import { rp as render } from "@fartlabs/ht/rp";
 
-export type { GlobalAttributes };
+export type { RpElementProps };
 
 /**
- * Rp renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element.
+ * RP component renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rp>
  */
-export function Rp(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function RP(
+  props: RpElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

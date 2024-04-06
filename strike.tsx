@@ -1,15 +1,15 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { StrikeElementProps } from "@fartlabs/ht/strike";
 import { strike as render } from "@fartlabs/ht/strike";
 
-export type { GlobalAttributes };
+export type { StrikeElementProps };
 
 /**
- * Strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
+ * STRIKE component renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
  * @deprecated
  */
-export function Strike(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function STRIKE(
+  props: StrikeElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -1,9 +1,5 @@
 import { Project } from "ts-morph";
-import {
-  capitalize,
-  getDescriptors,
-  toDocs,
-} from "@fartlabs/ht/cli/codegen.ts";
+import { getDescriptors, toDocs } from "@fartlabs/ht/cli/codegen.ts";
 
 if (import.meta.main) {
   const project = new Project();
@@ -18,19 +14,11 @@ if (import.meta.main) {
     );
 
     // Import the props interface.
-    sourceFile.addImportDeclaration(
-      descriptor.attrs.length === 0
-        ? {
-          isTypeOnly: true,
-          moduleSpecifier: "@fartlabs/ht/lib/global_attributes.ts",
-          namedImports: ["GlobalAttributes"],
-        }
-        : {
-          isTypeOnly: true,
-          moduleSpecifier: `@fartlabs/ht/${descriptor.tag}`,
-          namedImports: [descriptor.propsInterfaceName],
-        },
-    );
+    sourceFile.addImportDeclaration({
+      isTypeOnly: true,
+      moduleSpecifier: `@fartlabs/ht/${descriptor.tag}`,
+      namedImports: [descriptor.propsInterfaceName],
+    });
 
     // Import the render function.
     sourceFile.addImportDeclaration({
@@ -47,7 +35,7 @@ if (import.meta.main) {
     });
 
     // Create the component function.
-    const componentName = capitalize(descriptor.tag); // TODO: Consider using `.toUpperCase()` instead.
+    const componentName = descriptor.tag.toUpperCase();
     sourceFile.addFunction({
       name: componentName,
       isExported: true,
@@ -65,7 +53,7 @@ if (import.meta.main) {
       ],
       docs: toDocs({
         description:
-          `${componentName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          `${componentName} component renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
         see: descriptor.see,
         isDeprecated: descriptor.isDeprecated,
         isExperimental: descriptor.isExperimental,

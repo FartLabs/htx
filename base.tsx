@@ -1,13 +1,15 @@
-import type { BaseProps } from "@fartlabs/ht/base";
+import type { BaseElementProps } from "@fartlabs/ht/base";
 import { base as render } from "@fartlabs/ht/base";
 
-export type { BaseProps };
+export type { BaseElementProps };
 
 /**
- * Base renders the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
+ * BASE component renders the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
  */
-export function Base(props: BaseProps & { children?: string[] } = {}): string {
+export function BASE(
+  props: BaseElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest);
 }

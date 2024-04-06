@@ -1,14 +1,14 @@
-import type { VideoProps } from "@fartlabs/ht/video";
+import type { VideoElementProps } from "@fartlabs/ht/video";
 import { video as render } from "@fartlabs/ht/video";
 
-export type { VideoProps };
+export type { VideoElementProps };
 
 /**
- * Video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
+ * VIDEO component renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video>
  */
-export function Video(
-  props: VideoProps & { children?: string[] } = {},
+export function VIDEO(
+  props: VideoElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -42,9 +42,15 @@ deno add @fartlabs/jsonx @fartlabs/htx
 5\. Add a file ending in `.[j|t]sx` to your project. For example, `main.tsx`.
 
 ```tsx
-import { a } from "@fartlabs/htx";
+import { A, BODY, H1, P } from "@fartlabs/htx";
 
-const html = <a href="https://example.com">Hello, world!</a>;
+const html = (
+  <BODY>
+    <H1>Hello, World!</H1>
+    <P>This is a paragraph.</P>
+    <A href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</A>
+  </BODY>
+);
 
 Deno.writeTextFileSync("index.html", html);
 ```
@@ -58,7 +64,7 @@ deno run --allow-net main.tsx
 Resulting `index.html`:
 
 ```html
-<a href="https://example.com">Hello, world!</a>
+<body><h1>Hello, World!</h1><p>This is a paragraph.</p><a href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</a></body>
 ```
 
 ## Contribute

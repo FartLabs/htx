@@ -1,14 +1,14 @@
-import type { EmbedProps } from "@fartlabs/ht/embed";
+import type { EmbedElementProps } from "@fartlabs/ht/embed";
 import { embed as render } from "@fartlabs/ht/embed";
 
-export type { EmbedProps };
+export type { EmbedElementProps };
 
 /**
- * Embed renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+ * EMBED component renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
  */
-export function Embed(
-  props: EmbedProps & { children?: string[] } = {},
+export function EMBED(
+  props: EmbedElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest);

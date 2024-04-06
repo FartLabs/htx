@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { DtElementProps } from "@fartlabs/ht/dt";
 import { dt as render } from "@fartlabs/ht/dt";
 
-export type { GlobalAttributes };
+export type { DtElementProps };
 
 /**
- * Dt renders the [`dt`](https://developer.mozilla.org/docs/Web/HTML/Element/dt) element.
+ * DT component renders the [`dt`](https://developer.mozilla.org/docs/Web/HTML/Element/dt) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dt>
  */
-export function Dt(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function DT(
+  props: DtElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

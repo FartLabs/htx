@@ -1,15 +1,15 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { AcronymElementProps } from "@fartlabs/ht/acronym";
 import { acronym as render } from "@fartlabs/ht/acronym";
 
-export type { GlobalAttributes };
+export type { AcronymElementProps };
 
 /**
- * Acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
+ * ACRONYM component renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/acronym>
  * @deprecated
  */
-export function Acronym(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function ACRONYM(
+  props: AcronymElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

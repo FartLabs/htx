@@ -1,14 +1,14 @@
-import type { TrackProps } from "@fartlabs/ht/track";
+import type { TrackElementProps } from "@fartlabs/ht/track";
 import { track as render } from "@fartlabs/ht/track";
 
-export type { TrackProps };
+export type { TrackElementProps };
 
 /**
- * Track renders the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+ * TRACK component renders the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track>
  */
-export function Track(
-  props: TrackProps & { children?: string[] } = {},
+export function TRACK(
+  props: TrackElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest);

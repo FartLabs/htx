@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { AbbrElementProps } from "@fartlabs/ht/abbr";
 import { abbr as render } from "@fartlabs/ht/abbr";
 
-export type { GlobalAttributes };
+export type { AbbrElementProps };
 
 /**
- * Abbr renders the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element.
+ * ABBR component renders the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/abbr>
  */
-export function Abbr(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function ABBR(
+  props: AbbrElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

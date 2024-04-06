@@ -1,13 +1,15 @@
-import type { DelProps } from "@fartlabs/ht/del";
+import type { DelElementProps } from "@fartlabs/ht/del";
 import { del as render } from "@fartlabs/ht/del";
 
-export type { DelProps };
+export type { DelElementProps };
 
 /**
- * Del renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
+ * DEL component renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del>
  */
-export function Del(props: DelProps & { children?: string[] } = {}): string {
+export function DEL(
+  props: DelElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

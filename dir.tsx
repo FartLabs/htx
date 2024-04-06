@@ -1,14 +1,16 @@
-import type { DirProps } from "@fartlabs/ht/dir";
+import type { DirElementProps } from "@fartlabs/ht/dir";
 import { dir as render } from "@fartlabs/ht/dir";
 
-export type { DirProps };
+export type { DirElementProps };
 
 /**
- * Dir renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Element/dir) element.
+ * DIR component renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Element/dir) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dir>
  * @deprecated
  */
-export function Dir(props: DirProps & { children?: string[] } = {}): string {
+export function DIR(
+  props: DirElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

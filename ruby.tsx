@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { RubyElementProps } from "@fartlabs/ht/ruby";
 import { ruby as render } from "@fartlabs/ht/ruby";
 
-export type { GlobalAttributes };
+export type { RubyElementProps };
 
 /**
- * Ruby renders the [`ruby`](https://developer.mozilla.org/docs/Web/HTML/Element/ruby) element.
+ * RUBY component renders the [`ruby`](https://developer.mozilla.org/docs/Web/HTML/Element/ruby) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ruby>
  */
-export function Ruby(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function RUBY(
+  props: RubyElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

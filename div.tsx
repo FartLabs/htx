@@ -1,13 +1,15 @@
-import type { DivProps } from "@fartlabs/ht/div";
+import type { DivElementProps } from "@fartlabs/ht/div";
 import { div as render } from "@fartlabs/ht/div";
 
-export type { DivProps };
+export type { DivElementProps };
 
 /**
- * Div renders the [`div`](https://developer.mozilla.org/docs/Web/HTML/Element/div) element.
+ * DIV component renders the [`div`](https://developer.mozilla.org/docs/Web/HTML/Element/div) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/div>
  */
-export function Div(props: DivProps & { children?: string[] } = {}): string {
+export function DIV(
+  props: DivElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

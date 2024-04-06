@@ -1,14 +1,14 @@
-import type { IframeProps } from "@fartlabs/ht/iframe";
+import type { IframeElementProps } from "@fartlabs/ht/iframe";
 import { iframe as render } from "@fartlabs/ht/iframe";
 
-export type { IframeProps };
+export type { IframeElementProps };
 
 /**
- * Iframe renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+ * IFRAME component renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
  */
-export function Iframe(
-  props: IframeProps & { children?: string[] } = {},
+export function IFRAME(
+  props: IframeElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

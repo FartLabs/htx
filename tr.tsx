@@ -1,13 +1,15 @@
-import type { TrProps } from "@fartlabs/ht/tr";
+import type { TrElementProps } from "@fartlabs/ht/tr";
 import { tr as render } from "@fartlabs/ht/tr";
 
-export type { TrProps };
+export type { TrElementProps };
 
 /**
- * Tr renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+ * TR component renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
  */
-export function Tr(props: TrProps & { children?: string[] } = {}): string {
+export function TR(
+  props: TrElementProps & { children?: string[] } = {},
+): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

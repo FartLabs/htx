@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { HgroupElementProps } from "@fartlabs/ht/hgroup";
 import { hgroup as render } from "@fartlabs/ht/hgroup";
 
-export type { GlobalAttributes };
+export type { HgroupElementProps };
 
 /**
- * Hgroup renders the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/hgroup) element.
+ * HGROUP component renders the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/hgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hgroup>
  */
-export function Hgroup(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function HGROUP(
+  props: HgroupElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

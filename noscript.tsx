@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { NoscriptElementProps } from "@fartlabs/ht/noscript";
 import { noscript as render } from "@fartlabs/ht/noscript";
 
-export type { GlobalAttributes };
+export type { NoscriptElementProps };
 
 /**
- * Noscript renders the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element.
+ * NOSCRIPT component renders the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noscript>
  */
-export function Noscript(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function NOSCRIPT(
+  props: NoscriptElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

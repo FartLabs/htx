@@ -1,14 +1,14 @@
-import type { TextareaProps } from "@fartlabs/ht/textarea";
+import type { TextareaElementProps } from "@fartlabs/ht/textarea";
 import { textarea as render } from "@fartlabs/ht/textarea";
 
-export type { TextareaProps };
+export type { TextareaElementProps };
 
 /**
- * Textarea renders the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element.
+ * TEXTAREA component renders the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/textarea>
  */
-export function Textarea(
-  props: TextareaProps & { children?: string[] } = {},
+export function TEXTAREA(
+  props: TextareaElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

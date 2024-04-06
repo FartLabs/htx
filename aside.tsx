@@ -1,14 +1,14 @@
-import type { GlobalAttributes } from "@fartlabs/ht/lib/global_attributes.ts";
+import type { AsideElementProps } from "@fartlabs/ht/aside";
 import { aside as render } from "@fartlabs/ht/aside";
 
-export type { GlobalAttributes };
+export type { AsideElementProps };
 
 /**
- * Aside renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
+ * ASIDE component renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/aside>
  */
-export function Aside(
-  props: GlobalAttributes & { children?: string[] } = {},
+export function ASIDE(
+  props: AsideElementProps & { children?: string[] } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
