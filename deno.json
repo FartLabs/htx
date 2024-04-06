@@ -1,1 +1,15 @@
-{}
+{
+  "lock": false,
+  "imports": {
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.4",
+    "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.10",
+    "ts-morph": "npm:ts-morph@^22.0.0"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@fartlabs/jsonx"
+  },
+  "tasks": {
+    "generate": "deno run -A cli/codegen.ts"
+  }
+}
