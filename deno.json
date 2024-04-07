@@ -1,9 +1,9 @@
 {
   "lock": false,
   "name": "@fartlabs/htx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "imports": {
-    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.4",
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.5",
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.10",
     "ts-morph": "npm:ts-morph@^22.0.0"
   },
