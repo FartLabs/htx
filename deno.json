@@ -16,6 +16,7 @@
   },
   "exports": {
     ".": "./mod.ts",
+    "./special": "./special/mod.ts",
     "./a": "./a.tsx",
     "./abbr": "./abbr.tsx",
     "./acronym": "./acronym.tsx",
