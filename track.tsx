@@ -10,6 +10,5 @@ export type { TrackElementProps };
 export function TRACK(
   props: TrackElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

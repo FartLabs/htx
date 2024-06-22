@@ -16,7 +16,7 @@
   },
   "exports": {
     ".": "./mod.ts",
-    "./special": "./special/mod.ts",
+    "./jsx-runtime": "./jsx-runtime.ts",
     "./a": "./a.tsx",
     "./abbr": "./abbr.tsx",
     "./acronym": "./acronym.tsx",

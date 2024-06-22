@@ -10,6 +10,5 @@ export type { EmbedElementProps };
 export function EMBED(
   props: EmbedElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

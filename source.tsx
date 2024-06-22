@@ -10,6 +10,5 @@ export type { SourceElementProps };
 export function SOURCE(
   props: SourceElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

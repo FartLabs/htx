@@ -10,6 +10,5 @@ export type { WbrElementProps };
 export function WBR(
   props: WbrElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

@@ -2,7 +2,8 @@
 
 [![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)
 
-Render HTML components with JSX.
+Render HTML components with JSX powered by Deno and
+[**@fartlabs/jsonx**](https://jsr.io/@fartlabs/jsonx).
 
 ## API documentation
 
@@ -12,7 +13,7 @@ Generated API documentation is available at <https://jsr.io/@fartlabs/htx>.
 
 ### Deno
 
-Let's learn how to get started with rtx by creating a simple router in Deno.
+Let's learn how to get started with htx by creating a simple router in Deno.
 
 1\. [Install Deno](https://docs.deno.com/runtime/manual).
 
@@ -22,10 +23,10 @@ Let's learn how to get started with rtx by creating a simple router in Deno.
 deno init
 ```
 
-3\. Add `@fartlabs/jsonx` and `@fartlabs/htx` as project dependencies.
+3\. Add `@fartlabs/htx` as a project dependency.
 
 ```sh
-deno add @fartlabs/jsonx @fartlabs/htx
+deno add @fartlabs/htx
 ```
 
 4\. Add the following values to your `deno.json(c)` file.
@@ -34,7 +35,7 @@ deno add @fartlabs/jsonx @fartlabs/htx
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "@fartlabs/jsonx"
+    "jsxImportSource": "@fartlabs/htx"
   }
 }
 ```

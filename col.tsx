@@ -10,6 +10,5 @@ export type { ColElementProps };
 export function COL(
   props: ColElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

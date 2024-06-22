@@ -10,6 +10,5 @@ export type { InputElementProps };
 export function INPUT(
   props: InputElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }
