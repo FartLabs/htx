@@ -45,11 +45,9 @@ if (import.meta.main) {
         initializer: "{}",
       }],
       returnType: "string",
-      statements: [
+      statements: descriptor.isVoid ? ["return render(props);"] : [
         "const { children, ...rest } = props;",
-        descriptor.isVoid
-          ? "return render(rest);"
-          : "return render(rest, ...(children ?? []));",
+        "return render(rest, ...(children ?? []));",
       ],
       docs: toDocs({
         description:
@@ -67,6 +65,7 @@ if (import.meta.main) {
     undefined,
     { overwrite: true },
   );
+  modFile.addStatements(`export * from "./special/mod.ts";`);
   for (const descriptor of descriptors) {
     modFile.addStatements(`export * from "./${descriptor.tag}.tsx";`);
   }
@@ -78,6 +77,7 @@ if (import.meta.main) {
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
     ".": "./mod.ts",
+    "./jsx-runtime": "./jsx-runtime.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
       `./${descriptor.tag}.tsx`,

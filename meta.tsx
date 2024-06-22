@@ -10,6 +10,5 @@ export type { MetaElementProps };
 export function META(
   props: MetaElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

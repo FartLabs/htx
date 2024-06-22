@@ -10,6 +10,5 @@ export type { AreaElementProps };
 export function AREA(
   props: AreaElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

@@ -10,6 +10,5 @@ export type { ImgElementProps };
 export function IMG(
   props: ImgElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }

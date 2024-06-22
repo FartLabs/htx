@@ -10,6 +10,5 @@ export type { LinkElementProps };
 export function LINK(
   props: LinkElementProps & { children?: string[] } = {},
 ): string {
-  const { children, ...rest } = props;
-  return render(rest);
+  return render(props);
 }
