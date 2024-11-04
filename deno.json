@@ -1,18 +1,19 @@
 {
   "lock": false,
   "name": "@fartlabs/htx",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "imports": {
-    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.5",
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.6",
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
-    "ts-morph": "npm:ts-morph@^22.0.0"
+    "ts-morph": "npm:ts-morph@^24.0.0"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "@fartlabs/jsonx"
   },
   "tasks": {
-    "generate": "deno run -A cli/codegen.ts"
+    "generate": "deno run -A cli/codegen.ts",
+    "molt": "deno run -A jsr:@molt/cli -w"
   },
   "exports": {
     ".": "./mod.ts",
