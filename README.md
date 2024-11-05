@@ -26,7 +26,7 @@ deno init
 3\. Add `@fartlabs/htx` as a project dependency.
 
 ```sh
-deno add @fartlabs/htx
+deno add jsr:@fartlabs/htx
 ```
 
 4\. Add the following values to your `deno.json(c)` file.
