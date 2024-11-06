@@ -1,5 +1,5 @@
 import { Project } from "ts-morph";
-import { getDescriptors, toDocs } from "@fartlabs/ht/cli/codegen.ts";
+import { getDescriptors, toDocs } from "@fartlabs/ht/cli/codegen";
 
 if (import.meta.main) {
   const project = new Project();
@@ -65,7 +65,6 @@ if (import.meta.main) {
     undefined,
     { overwrite: true },
   );
-  modFile.addStatements(`export * from "./special/mod.ts";`);
   for (const descriptor of descriptors) {
     modFile.addStatements(`export * from "./${descriptor.tag}.tsx";`);
   }
@@ -78,6 +77,8 @@ if (import.meta.main) {
   denoConfig.exports = {
     ".": "./mod.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
+    "./render": "./render.ts",
+    "./global-attributes": "./global-attributes.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
       `./${descriptor.tag}.tsx`,
@@ -86,9 +87,10 @@ if (import.meta.main) {
   await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
 
   // Run `deno fmt` on the generated files.
-  const command = new Deno.Command(Deno.execPath(), {
-    args: ["fmt", "./"],
-  });
+  const command = new Deno.Command(
+    Deno.execPath(),
+    { args: ["fmt", "./"] },
+  );
   const output = await command.output();
   if (!output.success) {
     throw new Error(new TextDecoder().decode(output.stderr));

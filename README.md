@@ -65,7 +65,11 @@ deno run --allow-net main.tsx
 Resulting `index.html`:
 
 ```html
-<body><h1>Hello, World!</h1><p>This is a paragraph.</p><a href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</a></body>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is a paragraph.</p>
+  <a href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</a>
+</body>
 ```
 
 ## Contribute

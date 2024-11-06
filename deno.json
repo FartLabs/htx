@@ -1,9 +1,9 @@
 {
   "lock": false,
   "name": "@fartlabs/htx",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "imports": {
-    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.7",
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.9",
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
     "ts-morph": "npm:ts-morph@^24.0.0"
   },
@@ -18,6 +18,8 @@
   "exports": {
     ".": "./mod.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
+    "./render": "./render.ts",
+    "./global-attributes": "./global-attributes.ts",
     "./a": "./a.tsx",
     "./abbr": "./abbr.tsx",
     "./acronym": "./acronym.tsx",
