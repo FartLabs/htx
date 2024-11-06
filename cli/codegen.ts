@@ -59,6 +59,13 @@ if (import.meta.main) {
     });
   }
 
+  // Create a re-export for css.ts:
+  project.createSourceFile(
+    "./special/css.ts",
+    `export * from '@fartlabs/ht/css.ts';`,
+    { overwrite: true },
+  );
+
   // Create the mod file.
   const modFile = project.createSourceFile(
     "mod.ts",
