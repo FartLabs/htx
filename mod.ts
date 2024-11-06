@@ -1,4 +1,3 @@
-export * from "./special/mod.ts";
 export * from "./a.tsx";
 export * from "./abbr.tsx";
 export * from "./acronym.tsx";

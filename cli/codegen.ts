@@ -59,20 +59,12 @@ if (import.meta.main) {
     });
   }
 
-  // Create a re-export for css.ts:
-  project.createSourceFile(
-    "./special/css.ts",
-    `export * from '@fartlabs/ht/css.ts';`,
-    { overwrite: true },
-  );
-
   // Create the mod file.
   const modFile = project.createSourceFile(
     "mod.ts",
     undefined,
     { overwrite: true },
   );
-  modFile.addStatements(`export * from "./special/mod.ts";`);
   for (const descriptor of descriptors) {
     modFile.addStatements(`export * from "./${descriptor.tag}.tsx";`);
   }
@@ -85,6 +77,8 @@ if (import.meta.main) {
   denoConfig.exports = {
     ".": "./mod.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
+    "./render": "./render.ts",
+    "./global-attributes": "./global-attributes.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
       `./${descriptor.tag}.tsx`,
