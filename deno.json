@@ -3,7 +3,7 @@
   "name": "@fartlabs/htx",
   "version": "0.0.9",
   "imports": {
-    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.8",
+    "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.9",
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
     "ts-morph": "npm:ts-morph@^24.0.0"
   },
