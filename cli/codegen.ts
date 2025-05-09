@@ -7,11 +7,10 @@ if (import.meta.main) {
   // Create a new TSX component file for each descriptor.
   const descriptors = getDescriptors();
   for (const descriptor of descriptors) {
-    const sourceFile = project.createSourceFile(
-      `./${descriptor.tag}.tsx`,
-      "",
-      { overwrite: true, scriptKind: /* TSX */ 4 },
-    );
+    const sourceFile = project.createSourceFile(`./${descriptor.tag}.tsx`, "", {
+      overwrite: true,
+      scriptKind: /* TSX */ 4,
+    });
 
     // Import the props interface.
     sourceFile.addImportDeclaration({
@@ -23,9 +22,7 @@ if (import.meta.main) {
     // Import the render function.
     sourceFile.addImportDeclaration({
       moduleSpecifier: `@fartlabs/ht/${descriptor.tag}`,
-      namedImports: [
-        { name: descriptor.functionName, alias: "render" },
-      ],
+      namedImports: [{ name: descriptor.functionName, alias: "render" }],
     });
 
     // Re-export the props interface.
@@ -39,11 +36,14 @@ if (import.meta.main) {
     sourceFile.addFunction({
       name: componentName,
       isExported: true,
-      parameters: [{
-        name: "props",
-        type: `${descriptor.propsInterfaceName} & { children?: string[] }`,
-        initializer: "{}",
-      }],
+      parameters: [
+        {
+          name: "props",
+          type:
+            `& (${descriptor.propsInterfaceName}) // deno-lint-ignore no-explicit-any\n& { children?: any }`,
+          initializer: "{}",
+        },
+      ],
       returnType: "string",
       statements: descriptor.isVoid ? ["return render(props);"] : [
         "const { children, ...rest } = props;",
@@ -60,11 +60,9 @@ if (import.meta.main) {
   }
 
   // Create the mod file.
-  const modFile = project.createSourceFile(
-    "mod.ts",
-    undefined,
-    { overwrite: true },
-  );
+  const modFile = project.createSourceFile("mod.ts", undefined, {
+    overwrite: true,
+  });
   for (const descriptor of descriptors) {
     modFile.addStatements(`export * from "./${descriptor.tag}.tsx";`);
   }
@@ -79,18 +77,17 @@ if (import.meta.main) {
     "./jsx-runtime": "./jsx-runtime.ts",
     "./render": "./render.ts",
     "./global-attributes": "./global-attributes.ts",
-    ...Object.fromEntries(descriptors.map((descriptor) => [
-      `./${descriptor.tag}`,
-      `./${descriptor.tag}.tsx`,
-    ])),
+    ...Object.fromEntries(
+      descriptors.map((descriptor) => [
+        `./${descriptor.tag}`,
+        `./${descriptor.tag}.tsx`,
+      ]),
+    ),
   };
   await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
 
   // Run `deno fmt` on the generated files.
-  const command = new Deno.Command(
-    Deno.execPath(),
-    { args: ["fmt", "./"] },
-  );
+  const command = new Deno.Command(Deno.execPath(), { args: ["fmt", "./"] });
   const output = await command.output();
   if (!output.success) {
     throw new Error(new TextDecoder().decode(output.stderr));

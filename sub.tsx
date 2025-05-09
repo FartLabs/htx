@@ -4,12 +4,12 @@ import { sub as render } from "@fartlabs/ht/sub";
 export type { SubElementProps };
 
 /**
- * SUB component renders the [`sub`](https://developer.mozilla.org/docs/Web/HTML/Element/sub) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/sub>
+ * SUB component renders the [`sub`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/sub) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/sub>
  */
-export function SUB(
-  props: SubElementProps & { children?: string[] } = {},
-): string {
+export function SUB(props:
+  & (SubElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

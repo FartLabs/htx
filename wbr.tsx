@@ -4,11 +4,11 @@ import { wbr as render } from "@fartlabs/ht/wbr";
 export type { WbrElementProps };
 
 /**
- * WBR component renders the [`wbr`](https://developer.mozilla.org/docs/Web/HTML/Element/wbr) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/wbr>
+ * WBR component renders the [`wbr`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/wbr) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/wbr>
  */
-export function WBR(
-  props: WbrElementProps & { children?: string[] } = {},
-): string {
+export function WBR(props:
+  & (WbrElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

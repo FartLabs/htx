@@ -4,13 +4,13 @@ import { noframes as render } from "@fartlabs/ht/noframes";
 export type { NoframesElementProps };
 
 /**
- * NOFRAMES component renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Element/noframes) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noframes>
+ * NOFRAMES component renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes>
  * @deprecated
  */
-export function NOFRAMES(
-  props: NoframesElementProps & { children?: string[] } = {},
-): string {
+export function NOFRAMES(props:
+  & (NoframesElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

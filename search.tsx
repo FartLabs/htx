@@ -4,12 +4,12 @@ import { search as render } from "@fartlabs/ht/search";
 export type { SearchElementProps };
 
 /**
- * SEARCH component renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Element/search) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/search>
+ * SEARCH component renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search>
  */
-export function SEARCH(
-  props: SearchElementProps & { children?: string[] } = {},
-): string {
+export function SEARCH(props:
+  & (SearchElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

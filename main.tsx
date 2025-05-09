@@ -4,12 +4,12 @@ import { main as render } from "@fartlabs/ht/main";
 export type { MainElementProps };
 
 /**
- * MAIN component renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/main>
+ * MAIN component renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/main) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/main>
  */
-export function MAIN(
-  props: MainElementProps & { children?: string[] } = {},
-): string {
+export function MAIN(props:
+  & (MainElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

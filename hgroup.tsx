@@ -4,12 +4,12 @@ import { hgroup as render } from "@fartlabs/ht/hgroup";
 export type { HgroupElementProps };
 
 /**
- * HGROUP component renders the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/hgroup) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hgroup>
+ * HGROUP component renders the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/hgroup) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/hgroup>
  */
-export function HGROUP(
-  props: HgroupElementProps & { children?: string[] } = {},
-): string {
+export function HGROUP(props:
+  & (HgroupElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

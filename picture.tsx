@@ -4,12 +4,12 @@ import { picture as render } from "@fartlabs/ht/picture";
 export type { PictureElementProps };
 
 /**
- * PICTURE component renders the [`picture`](https://developer.mozilla.org/docs/Web/HTML/Element/picture) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/picture>
+ * PICTURE component renders the [`picture`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/picture) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/picture>
  */
-export function PICTURE(
-  props: PictureElementProps & { children?: string[] } = {},
-): string {
+export function PICTURE(props:
+  & (PictureElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

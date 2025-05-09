@@ -4,12 +4,12 @@ import { body as render } from "@fartlabs/ht/body";
 export type { BodyElementProps };
 
 /**
- * BODY component renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
+ * BODY component renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/body) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/body>
  */
-export function BODY(
-  props: BodyElementProps & { children?: string[] } = {},
-): string {
+export function BODY(props:
+  & (BodyElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

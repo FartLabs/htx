@@ -4,13 +4,13 @@ import { strike as render } from "@fartlabs/ht/strike";
 export type { StrikeElementProps };
 
 /**
- * STRIKE component renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
+ * STRIKE component renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike>
  * @deprecated
  */
-export function STRIKE(
-  props: StrikeElementProps & { children?: string[] } = {},
-): string {
+export function STRIKE(props:
+  & (StrikeElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

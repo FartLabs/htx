@@ -4,11 +4,11 @@ import { col as render } from "@fartlabs/ht/col";
 export type { ColElementProps };
 
 /**
- * COL component renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/col>
+ * COL component renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/col) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/col>
  */
-export function COL(
-  props: ColElementProps & { children?: string[] } = {},
-): string {
+export function COL(props:
+  & (ColElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

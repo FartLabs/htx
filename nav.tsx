@@ -4,12 +4,12 @@ import { nav as render } from "@fartlabs/ht/nav";
 export type { NavElementProps };
 
 /**
- * NAV component renders the [`nav`](https://developer.mozilla.org/docs/Web/HTML/Element/nav) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/nav>
+ * NAV component renders the [`nav`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/nav) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/nav>
  */
-export function NAV(
-  props: NavElementProps & { children?: string[] } = {},
-): string {
+export function NAV(props:
+  & (NavElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

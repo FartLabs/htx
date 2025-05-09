@@ -4,13 +4,13 @@ import { plaintext as render } from "@fartlabs/ht/plaintext";
 export type { PlaintextElementProps };
 
 /**
- * PLAINTEXT component renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
+ * PLAINTEXT component renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
  * @deprecated
  */
-export function PLAINTEXT(
-  props: PlaintextElementProps & { children?: string[] } = {},
-): string {
+export function PLAINTEXT(props:
+  & (PlaintextElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

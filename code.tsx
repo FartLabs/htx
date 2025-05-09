@@ -4,12 +4,12 @@ import { code as render } from "@fartlabs/ht/code";
 export type { CodeElementProps };
 
 /**
- * CODE component renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Element/code) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/code>
+ * CODE component renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code>
  */
-export function CODE(
-  props: CodeElementProps & { children?: string[] } = {},
-): string {
+export function CODE(props:
+  & (CodeElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

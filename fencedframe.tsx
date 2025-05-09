@@ -4,13 +4,13 @@ import { fencedframe as render } from "@fartlabs/ht/fencedframe";
 export type { FencedframeElementProps };
 
 /**
- * FENCEDFRAME component renders the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe>
+ * FENCEDFRAME component renders the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe>
  * @experimental
  */
-export function FENCEDFRAME(
-  props: FencedframeElementProps & { children?: string[] } = {},
-): string {
+export function FENCEDFRAME(props:
+  & (FencedframeElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

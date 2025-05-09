@@ -4,12 +4,12 @@ import { header as render } from "@fartlabs/ht/header";
 export type { HeaderElementProps };
 
 /**
- * HEADER component renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/header>
+ * HEADER component renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
  */
-export function HEADER(
-  props: HeaderElementProps & { children?: string[] } = {},
-): string {
+export function HEADER(props:
+  & (HeaderElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }
