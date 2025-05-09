@@ -4,8 +4,8 @@ import { slot as render } from "@fartlabs/ht/slot";
 export type { SlotElementProps };
 
 /**
- * SLOT component renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
+ * SLOT component renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot>
  */
 export function SLOT(
   props: SlotElementProps & { children?: string[] } = {},

@@ -4,8 +4,8 @@ import { th as render } from "@fartlabs/ht/th";
 export type { ThElementProps };
 
 /**
- * TH component renders the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/th>
+ * TH component renders the [`th`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/th) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/th>
  */
 export function TH(
   props: ThElementProps & { children?: string[] } = {},

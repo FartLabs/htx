@@ -4,8 +4,8 @@ import { span as render } from "@fartlabs/ht/span";
 export type { SpanElementProps };
 
 /**
- * SPAN component renders the [`span`](https://developer.mozilla.org/docs/Web/HTML/Element/span) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/span>
+ * SPAN component renders the [`span`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/span) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/span>
  */
 export function SPAN(
   props: SpanElementProps & { children?: string[] } = {},

@@ -4,8 +4,8 @@ import { tt as render } from "@fartlabs/ht/tt";
 export type { TtElementProps };
 
 /**
- * TT component renders the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Element/tt) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tt>
+ * TT component renders the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt>
  * @deprecated
  */
 export function TT(

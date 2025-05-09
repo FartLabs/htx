@@ -4,8 +4,8 @@ import { meta as render } from "@fartlabs/ht/meta";
 export type { MetaElementProps };
 
 /**
- * META component renders the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta>
+ * META component renders the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meta) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meta>
  */
 export function META(
   props: MetaElementProps & { children?: string[] } = {},

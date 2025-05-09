@@ -4,8 +4,8 @@ import { dir as render } from "@fartlabs/ht/dir";
 export type { DirElementProps };
 
 /**
- * DIR component renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Element/dir) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dir>
+ * DIR component renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir>
  * @deprecated
  */
 export function DIR(

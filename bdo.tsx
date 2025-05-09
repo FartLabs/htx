@@ -4,8 +4,8 @@ import { bdo as render } from "@fartlabs/ht/bdo";
 export type { BdoElementProps };
 
 /**
- * BDO component renders the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Element/bdo) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/bdo>
+ * BDO component renders the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/bdo) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/bdo>
  */
 export function BDO(
   props: BdoElementProps & { children?: string[] } = {},

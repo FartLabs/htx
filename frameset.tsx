@@ -4,8 +4,8 @@ import { frameset as render } from "@fartlabs/ht/frameset";
 export type { FramesetElementProps };
 
 /**
- * FRAMESET component renders the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frameset>
+ * FRAMESET component renders the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/frameset) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/frameset>
  * @deprecated
  */
 export function FRAMESET(

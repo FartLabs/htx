@@ -4,8 +4,8 @@ import { nobr as render } from "@fartlabs/ht/nobr";
 export type { NobrElementProps };
 
 /**
- * NOBR component renders the [`nobr`](https://developer.mozilla.org/docs/Web/HTML/Element/nobr) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/nobr>
+ * NOBR component renders the [`nobr`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/nobr) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/nobr>
  * @deprecated
  */
 export function NOBR(

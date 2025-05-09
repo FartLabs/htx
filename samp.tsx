@@ -4,8 +4,8 @@ import { samp as render } from "@fartlabs/ht/samp";
 export type { SampElementProps };
 
 /**
- * SAMP component renders the [`samp`](https://developer.mozilla.org/docs/Web/HTML/Element/samp) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/samp>
+ * SAMP component renders the [`samp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/samp) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/samp>
  */
 export function SAMP(
   props: SampElementProps & { children?: string[] } = {},

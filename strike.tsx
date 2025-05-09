@@ -4,8 +4,8 @@ import { strike as render } from "@fartlabs/ht/strike";
 export type { StrikeElementProps };
 
 /**
- * STRIKE component renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
+ * STRIKE component renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike>
  * @deprecated
  */
 export function STRIKE(

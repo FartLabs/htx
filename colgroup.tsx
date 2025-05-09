@@ -4,8 +4,8 @@ import { colgroup as render } from "@fartlabs/ht/colgroup";
 export type { ColgroupElementProps };
 
 /**
- * COLGROUP component renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
+ * COLGROUP component renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/colgroup) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/colgroup>
  */
 export function COLGROUP(
   props: ColgroupElementProps & { children?: string[] } = {},

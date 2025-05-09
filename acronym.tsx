@@ -4,8 +4,8 @@ import { acronym as render } from "@fartlabs/ht/acronym";
 export type { AcronymElementProps };
 
 /**
- * ACRONYM component renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/acronym>
+ * ACRONYM component renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym>
  * @deprecated
  */
 export function ACRONYM(

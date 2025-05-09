@@ -4,8 +4,8 @@ import { fieldset as render } from "@fartlabs/ht/fieldset";
 export type { FieldsetElementProps };
 
 /**
- * FIELDSET component renders the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset>
+ * FIELDSET component renders the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset>
  */
 export function FIELDSET(
   props: FieldsetElementProps & { children?: string[] } = {},

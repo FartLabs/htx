@@ -4,8 +4,8 @@ import { q as render } from "@fartlabs/ht/q";
 export type { QElementProps };
 
 /**
- * Q component renders the [`q`](https://developer.mozilla.org/docs/Web/HTML/Element/q) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/q>
+ * Q component renders the [`q`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/q) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/q>
  */
 export function Q(props: QElementProps & { children?: string[] } = {}): string {
   const { children, ...rest } = props;

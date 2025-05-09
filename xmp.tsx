@@ -4,8 +4,8 @@ import { xmp as render } from "@fartlabs/ht/xmp";
 export type { XmpElementProps };
 
 /**
- * XMP component renders the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Element/xmp) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/xmp>
+ * XMP component renders the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp>
  * @deprecated
  */
 export function XMP(

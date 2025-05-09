@@ -4,8 +4,8 @@ import { mark as render } from "@fartlabs/ht/mark";
 export type { MarkElementProps };
 
 /**
- * MARK component renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Element/mark) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/mark>
+ * MARK component renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark>
  */
 export function MARK(
   props: MarkElementProps & { children?: string[] } = {},

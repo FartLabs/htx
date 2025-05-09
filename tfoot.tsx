@@ -4,8 +4,8 @@ import { tfoot as render } from "@fartlabs/ht/tfoot";
 export type { TfootElementProps };
 
 /**
- * TFOOT component renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
+ * TFOOT component renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tfoot) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tfoot>
  */
 export function TFOOT(
   props: TfootElementProps & { children?: string[] } = {},

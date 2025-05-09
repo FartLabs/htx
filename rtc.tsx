@@ -4,8 +4,8 @@ import { rtc as render } from "@fartlabs/ht/rtc";
 export type { RtcElementProps };
 
 /**
- * RTC component renders the [`rtc`](https://developer.mozilla.org/docs/Web/HTML/Element/rtc) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rtc>
+ * RTC component renders the [`rtc`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rtc) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rtc>
  * @deprecated
  */
 export function RTC(

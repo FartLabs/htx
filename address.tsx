@@ -4,8 +4,8 @@ import { address as render } from "@fartlabs/ht/address";
 export type { AddressElementProps };
 
 /**
- * ADDRESS component renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/address>
+ * ADDRESS component renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address>
  */
 export function ADDRESS(
   props: AddressElementProps & { children?: string[] } = {},

@@ -4,8 +4,8 @@ import { plaintext as render } from "@fartlabs/ht/plaintext";
 export type { PlaintextElementProps };
 
 /**
- * PLAINTEXT component renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
+ * PLAINTEXT component renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
  * @deprecated
  */
 export function PLAINTEXT(

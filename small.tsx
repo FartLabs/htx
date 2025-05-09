@@ -4,8 +4,8 @@ import { small as render } from "@fartlabs/ht/small";
 export type { SmallElementProps };
 
 /**
- * SMALL component renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/small>
+ * SMALL component renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small>
  */
 export function SMALL(
   props: SmallElementProps & { children?: string[] } = {},

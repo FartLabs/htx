@@ -4,8 +4,8 @@ import { iframe as render } from "@fartlabs/ht/iframe";
 export type { IframeElementProps };
 
 /**
- * IFRAME component renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
+ * IFRAME component renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe>
  */
 export function IFRAME(
   props: IframeElementProps & { children?: string[] } = {},

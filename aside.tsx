@@ -4,8 +4,8 @@ import { aside as render } from "@fartlabs/ht/aside";
 export type { AsideElementProps };
 
 /**
- * ASIDE component renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/aside>
+ * ASIDE component renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside>
  */
 export function ASIDE(
   props: AsideElementProps & { children?: string[] } = {},

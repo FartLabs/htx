@@ -4,8 +4,8 @@ import { output as render } from "@fartlabs/ht/output";
 export type { OutputElementProps };
 
 /**
- * OUTPUT component renders the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output>
+ * OUTPUT component renders the [`output`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/output) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/output>
  */
 export function OUTPUT(
   props: OutputElementProps & { children?: string[] } = {},

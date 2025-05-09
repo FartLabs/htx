@@ -4,8 +4,8 @@ import { frame as render } from "@fartlabs/ht/frame";
 export type { FrameElementProps };
 
 /**
- * FRAME component renders the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
+ * FRAME component renders the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/frame) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/frame>
  * @deprecated
  */
 export function FRAME(

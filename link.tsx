@@ -4,8 +4,8 @@ import { link as render } from "@fartlabs/ht/link";
 export type { LinkElementProps };
 
 /**
- * LINK component renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
+ * LINK component renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link>
  */
 export function LINK(
   props: LinkElementProps & { children?: string[] } = {},

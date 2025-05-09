@@ -4,8 +4,8 @@ import { label as render } from "@fartlabs/ht/label";
 export type { LabelElementProps };
 
 /**
- * LABEL component renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label>
+ * LABEL component renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
 export function LABEL(
   props: LabelElementProps & { children?: string[] } = {},

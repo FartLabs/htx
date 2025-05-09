@@ -4,8 +4,8 @@ import { h5 as render } from "@fartlabs/ht/h5";
 export type { H5ElementProps };
 
 /**
- * H5 component renders the [`h5`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements>
+ * H5 component renders the [`h5`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements>
  */
 export function H5(
   props: H5ElementProps & { children?: string[] } = {},

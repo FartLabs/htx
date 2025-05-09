@@ -4,8 +4,8 @@ import { center as render } from "@fartlabs/ht/center";
 export type { CenterElementProps };
 
 /**
- * CENTER component renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/center>
+ * CENTER component renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center>
  * @deprecated
  */
 export function CENTER(

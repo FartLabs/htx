@@ -4,8 +4,8 @@ import { ins as render } from "@fartlabs/ht/ins";
 export type { InsElementProps };
 
 /**
- * INS component renders the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins>
+ * INS component renders the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ins) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ins>
  */
 export function INS(
   props: InsElementProps & { children?: string[] } = {},

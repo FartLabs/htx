@@ -4,8 +4,8 @@ import { dialog as render } from "@fartlabs/ht/dialog";
 export type { DialogElementProps };
 
 /**
- * DIALOG component renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dialog>
+ * DIALOG component renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog>
  */
 export function DIALOG(
   props: DialogElementProps & { children?: string[] } = {},

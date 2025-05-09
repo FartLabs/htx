@@ -4,8 +4,8 @@ import { body as render } from "@fartlabs/ht/body";
 export type { BodyElementProps };
 
 /**
- * BODY component renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
+ * BODY component renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/body) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/body>
  */
 export function BODY(
   props: BodyElementProps & { children?: string[] } = {},

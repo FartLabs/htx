@@ -4,8 +4,8 @@ import { legend as render } from "@fartlabs/ht/legend";
 export type { LegendElementProps };
 
 /**
- * LEGEND component renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Element/legend) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/legend>
+ * LEGEND component renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend>
  */
 export function LEGEND(
   props: LegendElementProps & { children?: string[] } = {},
