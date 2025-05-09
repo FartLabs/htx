@@ -7,9 +7,9 @@ export type { DialogElementProps };
  * DIALOG component renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog>
  */
-export function DIALOG(
-  props: DialogElementProps & { children?: any } = {},
-): string {
+export function DIALOG(props:
+  & (DialogElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

@@ -8,9 +8,9 @@ export type { NoembedElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noembed>
  * @deprecated
  */
-export function NOEMBED(
-  props: NoembedElementProps & { children?: any } = {},
-): string {
+export function NOEMBED(props:
+  & (NoembedElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

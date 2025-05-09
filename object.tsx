@@ -7,9 +7,9 @@ export type { ObjectElementProps };
  * OBJECT component renders the [`object`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/object) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/object>
  */
-export function OBJECT(
-  props: ObjectElementProps & { children?: any } = {},
-): string {
+export function OBJECT(props:
+  & (ObjectElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

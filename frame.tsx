@@ -8,9 +8,9 @@ export type { FrameElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/frame>
  * @deprecated
  */
-export function FRAME(
-  props: FrameElementProps & { children?: any } = {},
-): string {
+export function FRAME(props:
+  & (FrameElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

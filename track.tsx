@@ -7,8 +7,8 @@ export type { TrackElementProps };
  * TRACK component renders the [`track`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track>
  */
-export function TRACK(
-  props: TrackElementProps & { children?: any } = {},
-): string {
+export function TRACK(props:
+  & (TrackElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

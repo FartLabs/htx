@@ -7,9 +7,9 @@ export type { SectionElementProps };
  * SECTION component renders the [`section`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section>
  */
-export function SECTION(
-  props: SectionElementProps & { children?: any } = {},
-): string {
+export function SECTION(props:
+  & (SectionElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

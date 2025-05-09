@@ -7,7 +7,9 @@ export type { PreElementProps };
  * PRE component renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/pre) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/pre>
  */
-export function PRE(props: PreElementProps & { children?: any } = {}): string {
+export function PRE(props:
+  & (PreElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

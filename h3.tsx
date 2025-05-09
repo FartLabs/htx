@@ -7,7 +7,9 @@ export type { H3ElementProps };
  * H3 component renders the [`h3`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements>
  */
-export function H3(props: H3ElementProps & { children?: any } = {}): string {
+export function H3(props:
+  & (H3ElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

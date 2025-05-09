@@ -8,9 +8,9 @@ export type { FencedframeElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe>
  * @experimental
  */
-export function FENCEDFRAME(
-  props: FencedframeElementProps & { children?: any } = {},
-): string {
+export function FENCEDFRAME(props:
+  & (FencedframeElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

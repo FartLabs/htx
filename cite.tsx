@@ -7,9 +7,9 @@ export type { CiteElementProps };
  * CITE component renders the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite>
  */
-export function CITE(
-  props: CiteElementProps & { children?: any } = {},
-): string {
+export function CITE(props:
+  & (CiteElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

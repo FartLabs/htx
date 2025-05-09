@@ -7,9 +7,9 @@ export type { SlotElementProps };
  * SLOT component renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot>
  */
-export function SLOT(
-  props: SlotElementProps & { children?: any } = {},
-): string {
+export function SLOT(props:
+  & (SlotElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

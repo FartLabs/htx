@@ -7,7 +7,9 @@ export type { OlElementProps };
  * OL component renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol>
  */
-export function OL(props: OlElementProps & { children?: any } = {}): string {
+export function OL(props:
+  & (OlElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

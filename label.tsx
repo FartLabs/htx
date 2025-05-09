@@ -7,9 +7,9 @@ export type { LabelElementProps };
  * LABEL component renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
-export function LABEL(
-  props: LabelElementProps & { children?: any } = {},
-): string {
+export function LABEL(props:
+  & (LabelElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

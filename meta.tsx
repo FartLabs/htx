@@ -7,8 +7,8 @@ export type { MetaElementProps };
  * META component renders the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meta) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meta>
  */
-export function META(
-  props: MetaElementProps & { children?: any } = {},
-): string {
+export function META(props:
+  & (MetaElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

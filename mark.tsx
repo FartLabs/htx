@@ -7,9 +7,9 @@ export type { MarkElementProps };
  * MARK component renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark>
  */
-export function MARK(
-  props: MarkElementProps & { children?: any } = {},
-): string {
+export function MARK(props:
+  & (MarkElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

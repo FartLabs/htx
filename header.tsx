@@ -7,9 +7,9 @@ export type { HeaderElementProps };
  * HEADER component renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
  */
-export function HEADER(
-  props: HeaderElementProps & { children?: any } = {},
-): string {
+export function HEADER(props:
+  & (HeaderElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

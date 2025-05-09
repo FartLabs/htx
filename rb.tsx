@@ -8,7 +8,9 @@ export type { RbElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb>
  * @deprecated
  */
-export function RB(props: RbElementProps & { children?: any } = {}): string {
+export function RB(props:
+  & (RbElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

@@ -8,9 +8,9 @@ export type { AcronymElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym>
  * @deprecated
  */
-export function ACRONYM(
-  props: AcronymElementProps & { children?: any } = {},
-): string {
+export function ACRONYM(props:
+  & (AcronymElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

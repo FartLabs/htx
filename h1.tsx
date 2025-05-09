@@ -7,7 +7,9 @@ export type { H1ElementProps };
  * H1 component renders the [`h1`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/Heading_Elements>
  */
-export function H1(props: H1ElementProps & { children?: any } = {}): string {
+export function H1(props:
+  & (H1ElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

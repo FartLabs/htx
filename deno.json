@@ -13,7 +13,7 @@
     "jsxImportSource": "@fartlabs/jsonx"
   },
   "tasks": {
-    "generate": "deno run -A cli/codegen.ts",
+    "generate": "deno run -A cli/codegen.ts && deno fmt",
     "outdated": "deno outdated --update --latest"
   },
   "exports": {

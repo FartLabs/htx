@@ -7,9 +7,9 @@ export type { OptgroupElementProps };
  * OPTGROUP component renders the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup>
  */
-export function OPTGROUP(
-  props: OptgroupElementProps & { children?: any } = {},
-): string {
+export function OPTGROUP(props:
+  & (OptgroupElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

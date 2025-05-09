@@ -8,9 +8,9 @@ export type { PlaintextElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
  * @deprecated
  */
-export function PLAINTEXT(
-  props: PlaintextElementProps & { children?: any } = {},
-): string {
+export function PLAINTEXT(props:
+  & (PlaintextElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

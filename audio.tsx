@@ -7,9 +7,9 @@ export type { AudioElementProps };
  * AUDIO component renders the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio>
  */
-export function AUDIO(
-  props: AudioElementProps & { children?: any } = {},
-): string {
+export function AUDIO(props:
+  & (AudioElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

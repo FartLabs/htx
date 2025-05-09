@@ -8,9 +8,9 @@ export type { NoframesElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes>
  * @deprecated
  */
-export function NOFRAMES(
-  props: NoframesElementProps & { children?: any } = {},
-): string {
+export function NOFRAMES(props:
+  & (NoframesElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

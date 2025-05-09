@@ -7,9 +7,9 @@ export type { SelectElementProps };
  * SELECT component renders the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select>
  */
-export function SELECT(
-  props: SelectElementProps & { children?: any } = {},
-): string {
+export function SELECT(props:
+  & (SelectElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

@@ -8,9 +8,9 @@ export type { SelectedcontentElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent>
  * @experimental
  */
-export function SELECTEDCONTENT(
-  props: SelectedcontentElementProps & { children?: any } = {},
-): string {
+export function SELECTEDCONTENT(props:
+  & (SelectedcontentElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

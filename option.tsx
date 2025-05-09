@@ -7,9 +7,9 @@ export type { OptionElementProps };
  * OPTION component renders the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option>
  */
-export function OPTION(
-  props: OptionElementProps & { children?: any } = {},
-): string {
+export function OPTION(props:
+  & (OptionElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

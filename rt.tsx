@@ -7,7 +7,9 @@ export type { RtElementProps };
  * RT component renders the [`rt`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rt) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rt>
  */
-export function RT(props: RtElementProps & { children?: any } = {}): string {
+export function RT(props:
+  & (RtElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

@@ -7,9 +7,9 @@ export type { CodeElementProps };
  * CODE component renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code>
  */
-export function CODE(
-  props: CodeElementProps & { children?: any } = {},
-): string {
+export function CODE(props:
+  & (CodeElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

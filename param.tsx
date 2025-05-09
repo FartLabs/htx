@@ -8,8 +8,8 @@ export type { ParamElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/param>
  * @deprecated
  */
-export function PARAM(
-  props: ParamElementProps & { children?: any } = {},
-): string {
+export function PARAM(props:
+  & (ParamElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

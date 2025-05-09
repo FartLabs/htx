@@ -7,9 +7,9 @@ export type { AddressElementProps };
  * ADDRESS component renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address>
  */
-export function ADDRESS(
-  props: AddressElementProps & { children?: any } = {},
-): string {
+export function ADDRESS(props:
+  & (AddressElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

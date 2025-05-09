@@ -7,8 +7,8 @@ export type { LinkElementProps };
  * LINK component renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link>
  */
-export function LINK(
-  props: LinkElementProps & { children?: any } = {},
-): string {
+export function LINK(props:
+  & (LinkElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   return render(props);
 }

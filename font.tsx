@@ -8,9 +8,9 @@ export type { FontElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/font>
  * @deprecated
  */
-export function FONT(
-  props: FontElementProps & { children?: any } = {},
-): string {
+export function FONT(props:
+  & (FontElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

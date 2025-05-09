@@ -8,9 +8,9 @@ export type { CenterElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center>
  * @deprecated
  */
-export function CENTER(
-  props: CenterElementProps & { children?: any } = {},
-): string {
+export function CENTER(props:
+  & (CenterElementProps) // deno-lint-ignore no-explicit-any
+  & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }
