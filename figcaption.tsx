@@ -8,7 +8,7 @@ export type { FigcaptionElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/figcaption>
  */
 export function FIGCAPTION(
-  props: FigcaptionElementProps & { children?: string[] } = {},
+  props: FigcaptionElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

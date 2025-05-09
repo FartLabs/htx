@@ -8,7 +8,7 @@ export type { EmbedElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/embed>
  */
 export function EMBED(
-  props: EmbedElementProps & { children?: string[] } = {},
+  props: EmbedElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

@@ -8,7 +8,7 @@ export type { TemplateElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template>
  */
 export function TEMPLATE(
-  props: TemplateElementProps & { children?: string[] } = {},
+  props: TemplateElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

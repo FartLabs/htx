@@ -9,7 +9,7 @@ export type { NoembedElementProps };
  * @deprecated
  */
 export function NOEMBED(
-  props: NoembedElementProps & { children?: string[] } = {},
+  props: NoembedElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

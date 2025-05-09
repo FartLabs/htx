@@ -8,7 +8,7 @@ export type { OutputElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/output>
  */
 export function OUTPUT(
-  props: OutputElementProps & { children?: string[] } = {},
+  props: OutputElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

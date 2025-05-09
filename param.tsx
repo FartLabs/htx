@@ -9,7 +9,7 @@ export type { ParamElementProps };
  * @deprecated
  */
 export function PARAM(
-  props: ParamElementProps & { children?: string[] } = {},
+  props: ParamElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

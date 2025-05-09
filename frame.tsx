@@ -9,7 +9,7 @@ export type { FrameElementProps };
  * @deprecated
  */
 export function FRAME(
-  props: FrameElementProps & { children?: string[] } = {},
+  props: FrameElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

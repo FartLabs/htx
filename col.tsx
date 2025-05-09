@@ -7,8 +7,6 @@ export type { ColElementProps };
  * COL component renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/col) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/col>
  */
-export function COL(
-  props: ColElementProps & { children?: string[] } = {},
-): string {
+export function COL(props: ColElementProps & { children?: any } = {}): string {
   return render(props);
 }

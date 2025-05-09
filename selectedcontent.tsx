@@ -9,7 +9,7 @@ export type { SelectedcontentElementProps };
  * @experimental
  */
 export function SELECTEDCONTENT(
-  props: SelectedcontentElementProps & { children?: string[] } = {},
+  props: SelectedcontentElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

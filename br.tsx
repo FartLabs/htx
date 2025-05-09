@@ -7,8 +7,6 @@ export type { BrElementProps };
  * BR component renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/br) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/br>
  */
-export function BR(
-  props: BrElementProps & { children?: string[] } = {},
-): string {
+export function BR(props: BrElementProps & { children?: any } = {}): string {
   return render(props);
 }

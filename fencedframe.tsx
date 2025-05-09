@@ -9,7 +9,7 @@ export type { FencedframeElementProps };
  * @experimental
  */
 export function FENCEDFRAME(
-  props: FencedframeElementProps & { children?: string[] } = {},
+  props: FencedframeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

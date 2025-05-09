@@ -9,7 +9,7 @@ export type { FontElementProps };
  * @deprecated
  */
 export function FONT(
-  props: FontElementProps & { children?: string[] } = {},
+  props: FontElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

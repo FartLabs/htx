@@ -8,7 +8,7 @@ export type { LinkElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link>
  */
 export function LINK(
-  props: LinkElementProps & { children?: string[] } = {},
+  props: LinkElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

@@ -8,7 +8,7 @@ export type { TheadElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/thead>
  */
 export function THEAD(
-  props: TheadElementProps & { children?: string[] } = {},
+  props: TheadElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

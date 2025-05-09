@@ -8,7 +8,7 @@ export type { CanvasElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas>
  */
 export function CANVAS(
-  props: CanvasElementProps & { children?: string[] } = {},
+  props: CanvasElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

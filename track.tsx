@@ -8,7 +8,7 @@ export type { TrackElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track>
  */
 export function TRACK(
-  props: TrackElementProps & { children?: string[] } = {},
+  props: TrackElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

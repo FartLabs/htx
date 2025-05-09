@@ -8,7 +8,7 @@ export type { TbodyElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tbody>
  */
 export function TBODY(
-  props: TbodyElementProps & { children?: string[] } = {},
+  props: TbodyElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { MainElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/main>
  */
 export function MAIN(
-  props: MainElementProps & { children?: string[] } = {},
+  props: MainElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

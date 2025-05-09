@@ -8,7 +8,7 @@ export type { MenuElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/menu>
  */
 export function MENU(
-  props: MenuElementProps & { children?: string[] } = {},
+  props: MenuElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

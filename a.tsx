@@ -7,7 +7,7 @@ export type { AElementProps };
  * A component renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a>
  */
-export function A(props: AElementProps & { children?: string[] } = {}): string {
+export function A(props: AElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

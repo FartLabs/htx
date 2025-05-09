@@ -8,7 +8,7 @@ export type { FormElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/form>
  */
 export function FORM(
-  props: FormElementProps & { children?: string[] } = {},
+  props: FormElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

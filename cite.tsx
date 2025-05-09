@@ -8,7 +8,7 @@ export type { CiteElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite>
  */
 export function CITE(
-  props: CiteElementProps & { children?: string[] } = {},
+  props: CiteElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

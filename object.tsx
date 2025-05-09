@@ -8,7 +8,7 @@ export type { ObjectElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/object>
  */
 export function OBJECT(
-  props: ObjectElementProps & { children?: string[] } = {},
+  props: ObjectElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

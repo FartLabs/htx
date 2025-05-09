@@ -8,7 +8,7 @@ export type { HtmlElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html>
  */
 export function HTML(
-  props: HtmlElementProps & { children?: string[] } = {},
+  props: HtmlElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

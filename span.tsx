@@ -8,7 +8,7 @@ export type { SpanElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/span>
  */
 export function SPAN(
-  props: SpanElementProps & { children?: string[] } = {},
+  props: SpanElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

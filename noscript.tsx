@@ -8,7 +8,7 @@ export type { NoscriptElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noscript>
  */
 export function NOSCRIPT(
-  props: NoscriptElementProps & { children?: string[] } = {},
+  props: NoscriptElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

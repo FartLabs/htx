@@ -8,7 +8,7 @@ export type { VideoElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video>
  */
 export function VIDEO(
-  props: VideoElementProps & { children?: string[] } = {},
+  props: VideoElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

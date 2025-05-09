@@ -7,9 +7,7 @@ export type { RpElementProps };
  * RP component renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp>
  */
-export function RP(
-  props: RpElementProps & { children?: string[] } = {},
-): string {
+export function RP(props: RpElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

@@ -7,9 +7,7 @@ export type { BdoElementProps };
  * BDO component renders the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/bdo) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/bdo>
  */
-export function BDO(
-  props: BdoElementProps & { children?: string[] } = {},
-): string {
+export function BDO(props: BdoElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

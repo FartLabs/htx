@@ -8,7 +8,7 @@ export type { FieldsetElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset>
  */
 export function FIELDSET(
-  props: FieldsetElementProps & { children?: string[] } = {},
+  props: FieldsetElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

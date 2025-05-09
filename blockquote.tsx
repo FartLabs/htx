@@ -8,7 +8,7 @@ export type { BlockquoteElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote>
  */
 export function BLOCKQUOTE(
-  props: BlockquoteElementProps & { children?: string[] } = {},
+  props: BlockquoteElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

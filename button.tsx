@@ -8,7 +8,7 @@ export type { ButtonElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button>
  */
 export function BUTTON(
-  props: ButtonElementProps & { children?: string[] } = {},
+  props: ButtonElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

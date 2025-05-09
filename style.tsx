@@ -8,7 +8,7 @@ export type { StyleElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style>
  */
 export function STYLE(
-  props: StyleElementProps & { children?: string[] } = {},
+  props: StyleElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

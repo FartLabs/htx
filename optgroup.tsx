@@ -8,7 +8,7 @@ export type { OptgroupElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup>
  */
 export function OPTGROUP(
-  props: OptgroupElementProps & { children?: string[] } = {},
+  props: OptgroupElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

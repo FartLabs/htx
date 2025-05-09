@@ -8,7 +8,7 @@ export type { ScriptElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script>
  */
 export function SCRIPT(
-  props: ScriptElementProps & { children?: string[] } = {},
+  props: ScriptElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { AudioElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio>
  */
 export function AUDIO(
-  props: AudioElementProps & { children?: string[] } = {},
+  props: AudioElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

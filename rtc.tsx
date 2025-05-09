@@ -8,9 +8,7 @@ export type { RtcElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rtc>
  * @deprecated
  */
-export function RTC(
-  props: RtcElementProps & { children?: string[] } = {},
-): string {
+export function RTC(props: RtcElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

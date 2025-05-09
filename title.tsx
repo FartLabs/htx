@@ -8,7 +8,7 @@ export type { TitleElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/title>
  */
 export function TITLE(
-  props: TitleElementProps & { children?: string[] } = {},
+  props: TitleElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

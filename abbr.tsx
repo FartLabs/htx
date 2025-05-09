@@ -8,7 +8,7 @@ export type { AbbrElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/abbr>
  */
 export function ABBR(
-  props: AbbrElementProps & { children?: string[] } = {},
+  props: AbbrElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

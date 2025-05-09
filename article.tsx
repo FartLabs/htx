@@ -8,7 +8,7 @@ export type { ArticleElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article>
  */
 export function ARTICLE(
-  props: ArticleElementProps & { children?: string[] } = {},
+  props: ArticleElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

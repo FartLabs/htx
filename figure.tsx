@@ -8,7 +8,7 @@ export type { FigureElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/figure>
  */
 export function FIGURE(
-  props: FigureElementProps & { children?: string[] } = {},
+  props: FigureElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { CodeElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code>
  */
 export function CODE(
-  props: CodeElementProps & { children?: string[] } = {},
+  props: CodeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { SlotElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot>
  */
 export function SLOT(
-  props: SlotElementProps & { children?: string[] } = {},
+  props: SlotElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

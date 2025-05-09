@@ -8,7 +8,7 @@ export type { LegendElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend>
  */
 export function LEGEND(
-  props: LegendElementProps & { children?: string[] } = {},
+  props: LegendElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,9 +8,7 @@ export type { XmpElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp>
  * @deprecated
  */
-export function XMP(
-  props: XmpElementProps & { children?: string[] } = {},
-): string {
+export function XMP(props: XmpElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

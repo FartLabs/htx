@@ -8,7 +8,7 @@ export type { TfootElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tfoot>
  */
 export function TFOOT(
-  props: TfootElementProps & { children?: string[] } = {},
+  props: TfootElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

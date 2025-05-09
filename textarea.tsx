@@ -8,7 +8,7 @@ export type { TextareaElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea>
  */
 export function TEXTAREA(
-  props: TextareaElementProps & { children?: string[] } = {},
+  props: TextareaElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

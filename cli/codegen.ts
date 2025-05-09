@@ -41,7 +41,7 @@ if (import.meta.main) {
       isExported: true,
       parameters: [{
         name: "props",
-        type: `${descriptor.propsInterfaceName} & { children?: string[] }`,
+        type: `${descriptor.propsInterfaceName} & { children?: any }`,
         initializer: "{}",
       }],
       returnType: "string",

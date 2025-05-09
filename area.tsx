@@ -8,7 +8,7 @@ export type { AreaElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area>
  */
 export function AREA(
-  props: AreaElementProps & { children?: string[] } = {},
+  props: AreaElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

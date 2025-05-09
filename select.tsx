@@ -8,7 +8,7 @@ export type { SelectElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select>
  */
 export function SELECT(
-  props: SelectElementProps & { children?: string[] } = {},
+  props: SelectElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -9,7 +9,7 @@ export type { PlaintextElementProps };
  * @deprecated
  */
 export function PLAINTEXT(
-  props: PlaintextElementProps & { children?: string[] } = {},
+  props: PlaintextElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

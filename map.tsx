@@ -7,9 +7,7 @@ export type { MapElementProps };
  * MAP component renders the [`map`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/map) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/map>
  */
-export function MAP(
-  props: MapElementProps & { children?: string[] } = {},
-): string {
+export function MAP(props: MapElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

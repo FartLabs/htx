@@ -8,7 +8,7 @@ export type { OptionElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option>
  */
 export function OPTION(
-  props: OptionElementProps & { children?: string[] } = {},
+  props: OptionElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -9,7 +9,7 @@ export type { StrikeElementProps };
  * @deprecated
  */
 export function STRIKE(
-  props: StrikeElementProps & { children?: string[] } = {},
+  props: StrikeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

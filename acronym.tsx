@@ -9,7 +9,7 @@ export type { AcronymElementProps };
  * @deprecated
  */
 export function ACRONYM(
-  props: AcronymElementProps & { children?: string[] } = {},
+  props: AcronymElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

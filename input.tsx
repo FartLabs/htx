@@ -8,7 +8,7 @@ export type { InputElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input>
  */
 export function INPUT(
-  props: InputElementProps & { children?: string[] } = {},
+  props: InputElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

@@ -9,7 +9,7 @@ export type { MarqueeElementProps };
  * @deprecated
  */
 export function MARQUEE(
-  props: MarqueeElementProps & { children?: string[] } = {},
+  props: MarqueeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

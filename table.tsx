@@ -8,7 +8,7 @@ export type { TableElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/table>
  */
 export function TABLE(
-  props: TableElementProps & { children?: string[] } = {},
+  props: TableElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

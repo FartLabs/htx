@@ -8,9 +8,7 @@ export type { TtElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt>
  * @deprecated
  */
-export function TT(
-  props: TtElementProps & { children?: string[] } = {},
-): string {
+export function TT(props: TtElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

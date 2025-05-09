@@ -8,7 +8,7 @@ export type { MarkElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark>
  */
 export function MARK(
-  props: MarkElementProps & { children?: string[] } = {},
+  props: MarkElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

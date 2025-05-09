@@ -7,7 +7,7 @@ export type { SElementProps };
  * S component renders the [`s`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/s) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/s>
  */
-export function S(props: SElementProps & { children?: string[] } = {}): string {
+export function S(props: SElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

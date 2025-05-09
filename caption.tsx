@@ -8,7 +8,7 @@ export type { CaptionElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/caption>
  */
 export function CAPTION(
-  props: CaptionElementProps & { children?: string[] } = {},
+  props: CaptionElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { TimeElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/time>
  */
 export function TIME(
-  props: TimeElementProps & { children?: string[] } = {},
+  props: TimeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

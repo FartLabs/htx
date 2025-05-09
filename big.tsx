@@ -8,9 +8,7 @@ export type { BigElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/big>
  * @deprecated
  */
-export function BIG(
-  props: BigElementProps & { children?: string[] } = {},
-): string {
+export function BIG(props: BigElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

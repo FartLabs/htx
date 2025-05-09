@@ -8,7 +8,7 @@ export type { PictureElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/picture>
  */
 export function PICTURE(
-  props: PictureElementProps & { children?: string[] } = {},
+  props: PictureElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

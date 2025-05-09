@@ -8,7 +8,7 @@ export type { ProgressElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress>
  */
 export function PROGRESS(
-  props: ProgressElementProps & { children?: string[] } = {},
+  props: ProgressElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

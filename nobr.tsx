@@ -9,7 +9,7 @@ export type { NobrElementProps };
  * @deprecated
  */
 export function NOBR(
-  props: NobrElementProps & { children?: string[] } = {},
+  props: NobrElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

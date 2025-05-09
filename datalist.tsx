@@ -8,7 +8,7 @@ export type { DatalistElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/datalist>
  */
 export function DATALIST(
-  props: DatalistElementProps & { children?: string[] } = {},
+  props: DatalistElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

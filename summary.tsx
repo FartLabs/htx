@@ -8,7 +8,7 @@ export type { SummaryElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/summary>
  */
 export function SUMMARY(
-  props: SummaryElementProps & { children?: string[] } = {},
+  props: SummaryElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

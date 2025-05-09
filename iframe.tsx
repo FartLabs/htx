@@ -8,7 +8,7 @@ export type { IframeElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe>
  */
 export function IFRAME(
-  props: IframeElementProps & { children?: string[] } = {},
+  props: IframeElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

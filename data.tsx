@@ -8,7 +8,7 @@ export type { DataElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/data>
  */
 export function DATA(
-  props: DataElementProps & { children?: string[] } = {},
+  props: DataElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

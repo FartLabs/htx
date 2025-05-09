@@ -8,7 +8,7 @@ export type { SmallElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small>
  */
 export function SMALL(
-  props: SmallElementProps & { children?: string[] } = {},
+  props: SmallElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

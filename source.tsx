@@ -8,7 +8,7 @@ export type { SourceElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/source>
  */
 export function SOURCE(
-  props: SourceElementProps & { children?: string[] } = {},
+  props: SourceElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

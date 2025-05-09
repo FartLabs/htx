@@ -8,7 +8,7 @@ export type { FooterElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/footer>
  */
 export function FOOTER(
-  props: FooterElementProps & { children?: string[] } = {},
+  props: FooterElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

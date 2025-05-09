@@ -9,7 +9,7 @@ export type { NoframesElementProps };
  * @deprecated
  */
 export function NOFRAMES(
-  props: NoframesElementProps & { children?: string[] } = {},
+  props: NoframesElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

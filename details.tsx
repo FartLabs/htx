@@ -8,7 +8,7 @@ export type { DetailsElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/details>
  */
 export function DETAILS(
-  props: DetailsElementProps & { children?: string[] } = {},
+  props: DetailsElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

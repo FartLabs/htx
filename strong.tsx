@@ -8,7 +8,7 @@ export type { StrongElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strong>
  */
 export function STRONG(
-  props: StrongElementProps & { children?: string[] } = {},
+  props: StrongElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

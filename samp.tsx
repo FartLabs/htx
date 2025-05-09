@@ -8,7 +8,7 @@ export type { SampElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/samp>
  */
 export function SAMP(
-  props: SampElementProps & { children?: string[] } = {},
+  props: SampElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

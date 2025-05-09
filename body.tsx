@@ -8,7 +8,7 @@ export type { BodyElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/body>
  */
 export function BODY(
-  props: BodyElementProps & { children?: string[] } = {},
+  props: BodyElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

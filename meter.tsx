@@ -8,7 +8,7 @@ export type { MeterElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter>
  */
 export function METER(
-  props: MeterElementProps & { children?: string[] } = {},
+  props: MeterElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -8,7 +8,7 @@ export type { BaseElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/base>
  */
 export function BASE(
-  props: BaseElementProps & { children?: string[] } = {},
+  props: BaseElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

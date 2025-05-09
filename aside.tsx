@@ -8,7 +8,7 @@ export type { AsideElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside>
  */
 export function ASIDE(
-  props: AsideElementProps & { children?: string[] } = {},
+  props: AsideElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

@@ -9,7 +9,7 @@ export type { CenterElementProps };
  * @deprecated
  */
 export function CENTER(
-  props: CenterElementProps & { children?: string[] } = {},
+  props: CenterElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

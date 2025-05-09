@@ -7,9 +7,7 @@ export type { LiElementProps };
  * LI component renders the [`li`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/li) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/li>
  */
-export function LI(
-  props: LiElementProps & { children?: string[] } = {},
-): string {
+export function LI(props: LiElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

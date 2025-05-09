@@ -8,9 +8,7 @@ export type { RbElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb>
  * @deprecated
  */
-export function RB(
-  props: RbElementProps & { children?: string[] } = {},
-): string {
+export function RB(props: RbElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

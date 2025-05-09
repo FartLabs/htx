@@ -8,7 +8,7 @@ export type { HeadElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/head>
  */
 export function HEAD(
-  props: HeadElementProps & { children?: string[] } = {},
+  props: HeadElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

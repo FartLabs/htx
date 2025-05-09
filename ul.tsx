@@ -7,9 +7,7 @@ export type { UlElementProps };
  * UL component renders the [`ul`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ul) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ul>
  */
-export function UL(
-  props: UlElementProps & { children?: string[] } = {},
-): string {
+export function UL(props: UlElementProps & { children?: any } = {}): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
 }

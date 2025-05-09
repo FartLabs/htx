@@ -8,7 +8,7 @@ export type { SearchElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search>
  */
 export function SEARCH(
-  props: SearchElementProps & { children?: string[] } = {},
+  props: SearchElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

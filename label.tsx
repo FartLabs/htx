@@ -8,7 +8,7 @@ export type { LabelElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
 export function LABEL(
-  props: LabelElementProps & { children?: string[] } = {},
+  props: LabelElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

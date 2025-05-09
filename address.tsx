@@ -8,7 +8,7 @@ export type { AddressElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address>
  */
 export function ADDRESS(
-  props: AddressElementProps & { children?: string[] } = {},
+  props: AddressElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));

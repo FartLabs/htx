@@ -8,7 +8,7 @@ export type { MetaElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meta>
  */
 export function META(
-  props: MetaElementProps & { children?: string[] } = {},
+  props: MetaElementProps & { children?: any } = {},
 ): string {
   return render(props);
 }

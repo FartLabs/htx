@@ -8,7 +8,7 @@ export type { RubyElementProps };
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ruby>
  */
 export function RUBY(
-  props: RubyElementProps & { children?: string[] } = {},
+  props: RubyElementProps & { children?: any } = {},
 ): string {
   const { children, ...rest } = props;
   return render(rest, ...(children ?? []));
