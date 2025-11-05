@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { A } from "../a.tsx";
+import { A } from "../lib/html-elements/a.tsx";
 
 Deno.test("A anchor component", () => {
   assertEquals(

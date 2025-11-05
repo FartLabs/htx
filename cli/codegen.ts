@@ -6,11 +6,16 @@ if (import.meta.main) {
 
   // Create a new TSX component file for each descriptor.
   const descriptors = getDescriptors();
+  await Deno.mkdir("./lib/html-elements", { recursive: true });
   for (const descriptor of descriptors) {
-    const sourceFile = project.createSourceFile(`./${descriptor.tag}.tsx`, "", {
-      overwrite: true,
-      scriptKind: /* TSX */ 4,
-    });
+    const sourceFile = project.createSourceFile(
+      `./lib/html-elements/${descriptor.tag}.tsx`,
+      "",
+      {
+        overwrite: true,
+        scriptKind: /* TSX */ 4,
+      },
+    );
 
     // Import the props interface.
     sourceFile.addImportDeclaration({
@@ -64,7 +69,9 @@ if (import.meta.main) {
     overwrite: true,
   });
   for (const descriptor of descriptors) {
-    modFile.addStatements(`export * from "./${descriptor.tag}.tsx";`);
+    modFile.addStatements(
+      `export * from "./lib/html-elements/${descriptor.tag}.tsx";`,
+    );
   }
 
   // Save all the files.
@@ -80,7 +87,7 @@ if (import.meta.main) {
     ...Object.fromEntries(
       descriptors.map((descriptor) => [
         `./${descriptor.tag}`,
-        `./${descriptor.tag}.tsx`,
+        `./lib/html-elements/${descriptor.tag}.tsx`,
       ]),
     ),
   };
