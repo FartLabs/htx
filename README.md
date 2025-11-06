@@ -1,5 +1,7 @@
 # [@fartlabs/htx](https://jsr.io/@fartlabs/htx)
 
+[![JSR](https://jsr.io/badges/@fartlabs/htx)](https://jsr.io/@fartlabs/htx)
+[![JSR score](https://jsr.io/badges/@fartlabs/htx/score)](https://jsr.io/@fartlabs/htx/score)
 [![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)
 
 Render HTML components with JSX powered by Deno and
@@ -149,6 +151,13 @@ Run:
 deno run --allow-net server.ts
 ```
 
+## Related projects
+
+- [@fartlabs/ht](https://jsr.io/@fartlabs/ht) — minimal HTML tag helpers for
+  Deno/TypeScript
+- [@fartlabs/jsonx](https://jsr.io/@fartlabs/jsonx) — JSX runtime for
+  string-first rendering
+
 ## HTX best practices
 
 For the canonical best practices, see the HTX guide:
@@ -175,6 +184,10 @@ Benefits discussed in the guide linked above.
 | No VDOM overhead                             | VDOM diffing/reconciliation cost          |
 | No complex state or reconciliation           | State and lifecycle management required   |
 
+## Changelog
+
+- See [Releases](https://github.com/FartLabs/htx/releases) for version history.
+
 ## Contribute
 
 ### Style
@@ -186,6 +199,31 @@ Run `deno lint` to lint the code.
 ### Code generation
 
 Run `deno task generate` to generate the code.
+
+### Testing
+
+Run the test suite with Deno:
+
+```sh
+deno test -A
+```
+
+### Troubleshooting
+
+- If JSX fails to compile, ensure your `deno.json(c)` has:
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@fartlabs/htx"
+  }
+}
+```
+
+## License
+
+This project is licensed under the WTFPL. See [LICENSE](./LICENSE) for details.
 
 ---
 
