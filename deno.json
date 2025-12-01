@@ -1,7 +1,7 @@
 {
   "lock": false,
   "name": "@fartlabs/htx",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "imports": {
     "@fartlabs/ht": "jsr:@fartlabs/ht@^0.0.16",
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
