@@ -186,7 +186,7 @@ Benefits discussed in the guide linked above.
 
 ## Changelog
 
-- See [Releases](https://github.com/FartLabs/htx/releases) for version history.
+- See [Versions](https://jsr.io/@fartlabs/htx/versions) for version history.
 
 ## Contribute
 
