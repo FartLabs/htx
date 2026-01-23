@@ -1,8 +1,17 @@
 # [@fartlabs/htx](https://jsr.io/@fartlabs/htx)
 
+> **⚠️ This repository is archived**
+>
+> This repository has been archived and is no longer actively maintained. The
+> `@fartlabs/htx` package has been moved to a shared monorepo alongside its
+> sibling package `@fartlabs/ht`. This structure makes it easier to maintain
+> both packages together.
+>
+> **Please visit the [monorepo](https://github.com/FartLabs/ht) for the latest
+> source code and to contribute.**
+
 [![JSR](https://jsr.io/badges/@fartlabs/htx)](https://jsr.io/@fartlabs/htx)
 [![JSR score](https://jsr.io/badges/@fartlabs/htx/score)](https://jsr.io/@fartlabs/htx/score)
-[![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)
 
 Render HTML components with JSX powered by Deno and
 [**@fartlabs/jsonx**](https://jsr.io/@fartlabs/jsonx).
